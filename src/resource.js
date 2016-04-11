@@ -4,7 +4,10 @@ var res = {
     Pigs_png: "res/sprite_INGAME.png",
     Pigs2_png: "res/sprite1.png",
     Transparency_png: "res/transparency.png", 
-    background: "res/world.png"
+    background: "res/world.png",
+    play: "res/play.png",
+    f: "res/buttons.png",
+    map: "res/halloMap.tmx"
 };
 
 var g_resources = [];

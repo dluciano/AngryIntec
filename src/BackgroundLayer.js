@@ -5,8 +5,10 @@
             this._super();
             var i = new cc.Sprite(image);
             i.attr({
-                x: size.width/2,
-                y: size.height/2,
+                x: 0,
+                y: 0,
+                anchorX: 0,
+                anchorY: 0
             });
             this.addChild(i);
             return true;

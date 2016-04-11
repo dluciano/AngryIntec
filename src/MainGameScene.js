@@ -3,7 +3,7 @@
         ctor: function(){
             this._super();
             this.backgroundLayer = new abird.BackgroundLayer(res.background);
-            this.scoreLayer = new abird.ScoreLayer();
+            this.scoreLayer = new abird.ScoreLayer(res.map);
             return true;
         },
         onEnter: function() {
