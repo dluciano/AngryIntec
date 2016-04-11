@@ -15,6 +15,7 @@
         "src/resource.js",
         "src/AngryBird.js",
         "src/BackgroundLayer.js",
+        "src/ScoreLayer.js",
         "src/MainGameScene.js",
         "src/app.js"
     ]
