@@ -1,10 +1,10 @@
 var res = {
     HelloWorld_png : "res/HelloWorld.png",
-    Scoring_png: "scoring.png",
-    Pigs_png: "sprite_INGAME.png",
-    Pigs2_png: "sprite1.png",
-    Transparency_png: "transparency.png", 
-    
+    Scoring_png: "res/scoring.png",
+    Pigs_png: "res/sprite_INGAME.png",
+    Pigs2_png: "res/sprite1.png",
+    Transparency_png: "res/transparency.png", 
+    background: "res/world.png"
 };
 
 var g_resources = [];
