@@ -2,6 +2,7 @@ var abird;
 (function(){
     var AngryBirdNamespace = cc.Class.extend({
         run: function(){
+            this.loadAnimation();
             this.space = new cp.Space();
             this.space.gravity = cp.v(0, -100);
             cc.director.runScene(new abird.MainGameScene());
@@ -41,7 +42,16 @@ var abird;
             }
             return t;
         },
-        space: null
+        space: null,
+        loadAnimation: function(){
+            var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
+            var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));
+            var anim1 = new cc.AnimationFrame(frame1, 1);
+            var anim2 = new cc.AnimationFrame(frame2, 0.1);
+            var animFrames = [anim1, anim2, anim1];
+            var animation = new cc.Animation(animFrames, 3);
+            cc.animationCache.addAnimation(animation, "pig1");
+        },
     });
     abird = new AngryBirdNamespace();
 })();
