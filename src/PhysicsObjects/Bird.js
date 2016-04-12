@@ -24,12 +24,11 @@
                 this.collisionBegin.bind(this)
             );
         },
-        collisionBegin : function ( arbiter, space ) {
-            cc.log('collision begin');
+        collisionBegin : function (arbiter, space) {
             var shapes = arbiter.getShapes();
-            var collTypeA = shapes[0].collision_type;
-            var collTypeB = shapes[1].collision_type;
-            
+            var b1 = shapes[0].body;
+            var b2 = shapes[1].body;
+            console.log(b1);
             return true;
         }
 
