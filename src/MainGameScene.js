@@ -19,7 +19,6 @@
             return true;
         },
         update: function(dt){
-            console.log("aja");
             abird.space.step(dt);
         }
     });

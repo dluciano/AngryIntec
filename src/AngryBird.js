@@ -27,6 +27,9 @@ var abird;
                 case "WoodRectTriangle":
                     t = new abird.WoodRectTriangle(obj);
                     break;
+                case "PolyWall":
+                    t = new abird.PolyWall(obj);
+                    break;
                 default:
                     throw "Unreconogized object type: " + obj.type;
             }
