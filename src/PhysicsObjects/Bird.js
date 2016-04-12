@@ -1,7 +1,7 @@
 (function(){
     var Bird = abird.AbstractWoodObject.extend({
         ctor: function(metadata){
-            this._super(metadata, res.Pigs2_png, cc.rect(732, 744, 58, 58));
+            this._super(metadata, res.Pigs2_png, cc.rect(732, 800, 58, 58));
 //            this.animate();
             return true;
         },
