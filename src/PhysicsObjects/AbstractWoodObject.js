@@ -18,6 +18,15 @@
         },
         initPhysics: function(){
             throw "Physics not implemented";
+        },
+        remove: function(){
+            var shapeList = this.body.shapeList;
+            for(var i = 0; i < shapeList.length; i++){
+                abird.space.removeShape(shapeList[i]);
+                shapeList[i] = null;
+            }
+            abird.space.removeBody(this.body);
+            this.removeFromParent(true);
         }
     });
     

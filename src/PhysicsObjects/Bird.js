@@ -37,12 +37,15 @@
                     pigs.push(s);
             });
             var birdMass = bird.body.m;
-            pigs.forEach(function(p){
-                if(p.body.m - birdMass <= 0){
-                    p.die();
-                    return;
-                }
-                p.body.m -= birdMass;
+            
+            space.addPostStepCallback(function(){
+                pigs.forEach(function(p){
+                    if(p.body.m - birdMass <= 0){
+                        p.die();
+                        return;
+                    }
+                    p.body.m -= birdMass;
+                });
             });
             return true;
         }

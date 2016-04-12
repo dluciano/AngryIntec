@@ -2,6 +2,7 @@ var abird;
 (function(){
     var AngryBirdNamespace = cc.Class.extend({
         space: null,
+        animLayer: null,
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
@@ -57,8 +58,17 @@ var abird;
         },
         loadAnimation: function(){
             pig1();
-            pigDie();
         },
+        pigExplosion: function(x, y){
+            var fire = new cc.ParticleFire();
+            fire.setDuration(0.2);
+            fire.setTextureWithRect(cc.textureCache.addImage(res.Pigs2_png), cc.rect(169, 514, 115, 115));
+            fire.attr({
+                x: x, 
+                y: y
+            });
+            this.animLayer.addChild(fire, 10);
+        }
     });
     abird = new AngryBirdNamespace();
     

@@ -9,7 +9,7 @@
             this.scheduleUpdate();
             this.worldTmx = new cc.TMXTiledMap(res.map);
             this.backgroundLayer = new abird.BackgroundLayer(res.background);
-            this.animationLayer = new abird.AnimationLayer(this.worldTmx);
+            abird.animLayer = this.animationLayer = new abird.AnimationLayer(this.worldTmx);
             this.scoreLayer = new abird.ScoreLayer(this.worldTmx);
             
             this.addChild(this.backgroundLayer, 1);
