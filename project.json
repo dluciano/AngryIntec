@@ -19,6 +19,7 @@
         "src/PhysicsObjects/WoodBall.js",
         "src/PhysicsObjects/PolyWall.js",
         "src/PhysicsObjects/WoodSquare.js",
+        "src/PhysicsObjects/Pig1.js",
         "src/PhysicsObjects/WoodRectTriangle.js",
         "src/AnimationLayer.js",
         "src/ScoreLayer.js",

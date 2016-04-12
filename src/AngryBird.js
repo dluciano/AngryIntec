@@ -30,6 +30,9 @@ var abird;
                 case "PolyWall":
                     t = new abird.PolyWall(obj);
                     break;
+                case "Pig1":
+                    t = new abird.Pig1(obj);
+                    break;
                 default:
                     throw "Unreconogized object type: " + obj.type;
             }
