@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="61" height="31" tilewidth="21" tileheight="21" nextobjectid="11">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="61" height="31" tilewidth="21" tileheight="21" nextobjectid="15">
  <tileset firstgid="1" name="sprite3" tilewidth="21" tileheight="21" tilecount="414" columns="23">
   <image source="sprite3.png" width="500" height="390"/>
  </tileset>
- <imagelayer name="Image Layer 1" visible="0">
+ <imagelayer name="Image Layer 1">
   <image source="world.png"/>
  </imagelayer>
  <objectgroup name="world">
@@ -16,6 +16,8 @@
   </object>
   <object id="9" type="Pig1" x="950.25" y="477.75" width="98" height="98"/>
   <object id="10" type="Bird" x="99.75" y="546" width="58" height="58"/>
+  <object id="11" type="Stick1" x="164" y="408" width="40" height="200"/>
+  <object id="14" type="Stick2" x="164" y="408" width="44" height="126"/>
  </objectgroup>
  <layer name="Tile Layer 1" width="61" height="31" visible="0">
   <data encoding="csv">
