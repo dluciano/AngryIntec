@@ -5,7 +5,7 @@ var abird;
             this.loadAnimation();
             this.space = new cp.Space();
             this.space.gravity = cp.v(0, -100);
-            cc.director.runScene(new abird.MainGameScene());
+            cc.director.runScene(new abird.MenuGameScene());
         },
         getTmxObject: function (tmx, key, name){
             var objs = tmx
