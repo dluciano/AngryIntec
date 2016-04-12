@@ -2,6 +2,7 @@ var abird;
 (function(){
     var AngryBirdNamespace = cc.Class.extend({
         run: function(){
+            this.space.gravity = cp.v(0, -350);
             cc.director.runScene(new abird.MainGameScene());
         },
         getTmxObject: function (tmx, key, name){
@@ -29,7 +30,8 @@ var abird;
                     throw "Unreconogized object type: " + obj.type;
             }
             return t;
-        }
+        },
+        space: new cp.Space()
     });
     abird = new AngryBirdNamespace();
 })();

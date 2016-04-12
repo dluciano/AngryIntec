@@ -1,6 +1,7 @@
 (function(){
     var OBJECT_GROUP_NAME = "world";
     var AnimationLayer = cc.Layer.extend({
+        map: null,
         ctor: function(map){
             this._super();
             this.map = map;
@@ -17,8 +18,7 @@
                     cc.log(sObj);
                     self.addChild(sObj, 10);
                 });
-        },
-        map: null
+        }
     });
     abird.AnimationLayer = AnimationLayer;
 })();
