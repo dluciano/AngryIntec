@@ -10,7 +10,8 @@ var res = {
     play: "res/play.png",
     f: "res/buttons.png",
     map: "res/halloMap.tmx",
-    menuBack:"res/menu.png"
+    menuBack:"res/menu.png",
+    lev1:"res/playg.png"
 };
 
 var g_resources = [];

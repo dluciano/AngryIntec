@@ -15,7 +15,7 @@
    <polyline points="0,0 0,609 1281,609 1281,0 5.25,0"/>
   </object>
   <object id="9" type="Pig1" x="950.25" y="477.75" width="98" height="98"/>
-  <object id="10" type="Bird" x="99.75" y="546" width="58" height="58"/>
+  <object id="10" type="Bird" x="960.75" y="262.5" width="58" height="58"/>
   <object id="11" type="Stick1" x="164" y="408" width="40" height="200"/>
   <object id="14" type="Stick2" x="164" y="408" width="44" height="126"/>
  </objectgroup>
