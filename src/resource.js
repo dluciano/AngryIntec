@@ -9,7 +9,8 @@ var res = {
     background: "res/world.png",
     play: "res/play.png",
     f: "res/buttons.png",
-    map: "res/halloMap.tmx"
+    map: "res/halloMap.tmx",
+    menuBack:"res/menu.png"
 };
 
 var g_resources = [];
