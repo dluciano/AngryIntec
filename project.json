@@ -15,6 +15,11 @@
         "src/resource.js",
         "src/AngryBird.js",
         "src/BackgroundLayer.js",
+        "src/PhysicsObjects/AbstractWoodObject.js",
+        "src/PhysicsObjects/WoodBall.js",
+        "src/PhysicsObjects/WoodSquare.js",
+        "src/PhysicsObjects/WoodRectTriangle.js",
+        "src/AnimationLayer.js",
         "src/ScoreLayer.js",
         "src/MainGameScene.js",
         "src/app.js"

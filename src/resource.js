@@ -3,6 +3,8 @@ var res = {
     Scoring_png: "res/scoring.png",
     Pigs_png: "res/sprite_INGAME.png",
     Pigs2_png: "res/sprite1.png",
+    Pigs3_png: "res/sprite2.png",
+    Pigs4_png: "res/sprite3.png",
     Transparency_png: "res/transparency.png", 
     background: "res/world.png",
     play: "res/play.png",
