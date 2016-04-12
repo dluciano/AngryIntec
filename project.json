@@ -21,10 +21,13 @@
         "src/PhysicsObjects/PolyWall.js",
         "src/PhysicsObjects/WoodSquare.js",
         "src/PhysicsObjects/Pig1.js",
+        "src/PhysicsObjects/Stick1.js",
+        "src/PhysicsObjects/Stick2.js",
         "src/PhysicsObjects/WoodRectTriangle.js",
         "src/AnimationLayer.js",
         "src/ScoreLayer.js",
         "src/MainGameScene.js",
         "src/app.js"
+        
     ]
 }

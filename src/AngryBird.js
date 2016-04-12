@@ -37,6 +37,12 @@ var abird;
                 case "Bird":
                     t = new abird.Bird(obj);
                     break;
+                case "Stick1": //Parte del palito que va de fondo
+                    t = new abird.Stick1(obj);
+                    break;
+                case "Stick2": //Parte del palito que va de frente
+                    t = new abird.Stick2(obj);
+                    break;
                 default:
                     throw "Unreconogized object type: " + obj.type;
             }
