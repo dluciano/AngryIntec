@@ -12,17 +12,19 @@
             this.addChild(this.background,0);
             
             
-            this.button.loadTextures(res.play,res.play);
+             this.button.loadTextures(res.lev1,res.lev1);
             this.button.setAnchorPoint(cc.p(0,0));
-            this.button.x=cc.winSize.width/2;
-            this.button.y=cc.winSize.height/2;
+            this.button.x=cc.winSize.width/2-155;
+            this.button.y=cc.winSize.height/2-250;
             this.addChild(this.button);
-        
+            
             this.button.addTouchEventListener(this.touchEvent, this);
             this.button.addClickEventListener(function () {
                 cc.director.runScene(new abird.MainGameScene());
             }, this); 
             
+            var snd = new Audio('res/musicafondo.mp3') 
+            snd.play();
             
             return true;
         },
