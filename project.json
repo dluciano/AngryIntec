@@ -28,6 +28,7 @@
         "src/AnimationLayer.js",
         "src/ScoreLayer.js",
         "src/MainGameScene.js",
+        "src/MenuGameScene.js",
         "src/app.js"
         
     ]
