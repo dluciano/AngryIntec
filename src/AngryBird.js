@@ -56,14 +56,19 @@ var abird;
             return t;
         },
         loadAnimation: function(){
-            var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
-            var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));
-            var anim1 = new cc.AnimationFrame(frame1, 1);
-            var anim2 = new cc.AnimationFrame(frame2, 0.1);
-            var animFrames = [anim1, anim2, anim1];
-            var animation = new cc.Animation(animFrames, 3);
-            cc.animationCache.addAnimation(animation, "pig1");
+            pig1();
+            pigDie();
         },
     });
     abird = new AngryBirdNamespace();
+    
+    function pig1(){
+        var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
+        var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));
+        var anim1 = new cc.AnimationFrame(frame1, 1);
+        var anim2 = new cc.AnimationFrame(frame2, 0.1);
+        var animFrames = [anim1, anim2, anim1];
+        var animation = new cc.Animation(animFrames, 3);
+        cc.animationCache.addAnimation(animation, "pig1");
+    }
 })();

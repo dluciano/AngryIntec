@@ -20,15 +20,30 @@
             this.shape.setFriction(0.5);
         },
         initCollisions: function(){
-            abird.space.addCollisionHandler(BIRD, PIG,
+            abird.space.addCollisionHandler(
+                BIRD, 
+                PIG,
                 this.collisionBegin.bind(this)
             );
         },
         collisionBegin : function (arbiter, space) {
             var shapes = arbiter.getShapes();
-            var b1 = shapes[0].body;
-            var b2 = shapes[1].body;
-            console.log(b1);
+            var bird = null;
+            var pigs = [];
+            shapes.forEach(function(s){
+                if(s.collision_type === BIRD)
+                    bird = s
+                else
+                    pigs.push(s);
+            });
+            var birdMass = bird.body.m;
+            pigs.forEach(function(p){
+                if(p.body.m - birdMass <= 0){
+                    p.die();
+                    return;
+                }
+                p.body.m -= birdMass;
+            });
             return true;
         }
 

@@ -13,6 +13,11 @@
             this.shape = new cp.BoxShape(this.body, this.width, this.height);
             this.shape.setElasticity(0);
             this.shape.setFriction(0.5);
+            this.shape.die = function(){
+                this.stopAllActions();
+                this.runAction(cc.repeatForever(cc.animate(cc.animationCache.getAnimation("diePig"))));
+                this.removeFromParent(true);
+            };
         }
     });
     
