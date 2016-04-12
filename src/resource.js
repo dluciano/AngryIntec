@@ -9,6 +9,7 @@ var res = {
     background: "res/world.png",
     play: "res/play.png",
     f: "res/buttons.png",
+    lev1:"res/playg.png",
     map: "res/halloMap.tmx",
     menuBack:"res/menu.png"
 };
