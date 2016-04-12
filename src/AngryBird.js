@@ -2,6 +2,7 @@ var abird;
 (function(){
     var AngryBirdNamespace = cc.Class.extend({
         run: function(){
+            this.space = new cp.Space();
             this.space.gravity = cp.v(0, -350);
             cc.director.runScene(new abird.MainGameScene());
         },
@@ -31,7 +32,7 @@ var abird;
             }
             return t;
         },
-        space: new cp.Space()
+        space: null
     });
     abird = new AngryBirdNamespace();
 })();

@@ -15,7 +15,6 @@
                 .getObjects()
                 .forEach(function(obj){
                     var sObj = abird.tmxObjectBuilder(obj);
-                    cc.log(sObj);
                     self.addChild(sObj, 10);
                 });
         }

@@ -11,7 +11,6 @@
             abird.space.addBody(this.body);
             abird.space.addShape(this.shape);
             this.setBody(this.body);
-            
             this.body.setPos(cc.p(metadata.x,  metadata.y));
             
             return true;
