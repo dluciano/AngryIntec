@@ -23,7 +23,8 @@
                 cc.director.runScene(new abird.MainGameScene());
             }, this); 
             
-            cc.audioEngine.playMusic(res.menuMusic, true);
+            var snd = new Audio('res/musicafondo.mp3') 
+            snd.play();
             
             return true;
         },
