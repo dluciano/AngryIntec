@@ -16,6 +16,8 @@
             this.addChild(this.animationLayer, 2);
             this.addChild(this.scoreLayer, 3);
             this.addChild(this.worldTmx, 4);
+            this.debugNode = new cc.PhysicsDebugNode(abird.space);
+            this.addChild(this.debugNode, 100);
             return true;
         },
         update: function(dt){

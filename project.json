@@ -17,6 +17,7 @@
         "src/BackgroundLayer.js",
         "src/PhysicsObjects/AbstractWoodObject.js",
         "src/PhysicsObjects/WoodBall.js",
+        "src/PhysicsObjects/Bird.js",
         "src/PhysicsObjects/PolyWall.js",
         "src/PhysicsObjects/WoodSquare.js",
         "src/PhysicsObjects/Pig1.js",
