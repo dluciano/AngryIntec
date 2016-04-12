@@ -2,7 +2,8 @@
     var Bird = abird.AbstractWoodObject.extend({
         ctor: function(metadata){
             this._super(metadata, res.Pigs2_png, cc.rect(732, 800, 58, 58));
-//            this.animate();
+            this.animate();
+            this.initCollisions();
             return true;
         },
         animate: function(){
@@ -17,7 +18,21 @@
             this.shape = new cp.BoxShape(this.body, this.width, this.height);
             this.shape.setElasticity(0);
             this.shape.setFriction(0.5);
+        },
+        initCollisions: function(){
+            abird.space.addCollisionHandler(BIRD, PIG,
+                this.collisionBegin.bind(this)
+            );
+        },
+        collisionBegin : function ( arbiter, space ) {
+            cc.log('collision begin');
+            var shapes = arbiter.getShapes();
+            var collTypeA = shapes[0].collision_type;
+            var collTypeB = shapes[1].collision_type;
+            
+            return true;
         }
+
     });
     
     abird.Bird = Bird;

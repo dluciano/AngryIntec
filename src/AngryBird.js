@@ -1,6 +1,7 @@
 var abird;
 (function(){
     var AngryBirdNamespace = cc.Class.extend({
+        space: null,
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
@@ -18,23 +19,29 @@ var abird;
         },
         tmxObjectBuilder : function(obj){
             var t;
+            obj.collision_type = NONE;
             switch(obj.type){
                 case "WoodBall":
+                    obj.collision_type = WOOD;
                     t = new abird.WoodBall(obj);
                     break;
                 case "WoodSquare":
+                    obj.collision_type = WOOD;
                     t = new abird.WoodSquare(obj);
                     break;
                 case "WoodRectTriangle":
+                    obj.collision_type = WOOD;
                     t = new abird.WoodRectTriangle(obj);
                     break;
                 case "PolyWall":
                     t = new abird.PolyWall(obj);
                     break;
                 case "Pig1":
+                    obj.collision_type = PIG;
                     t = new abird.Pig1(obj);
                     break;
                 case "Bird":
+                    obj.collision_type = BIRD;
                     t = new abird.Bird(obj);
                     break;
                 case "Stick1": //Parte del palito que va de fondo
@@ -48,7 +55,6 @@ var abird;
             }
             return t;
         },
-        space: null,
         loadAnimation: function(){
             var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
             var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));

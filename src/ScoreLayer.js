@@ -11,7 +11,7 @@
             //button.addTouchEventListener(this.touchEvent, this);
 //            button.addClickEventListener(function () {
 //                cc.director.pushScene(new HelloWorldScene());
-//            }); 
+//            });
             this.addChild(button);
             
             return true;

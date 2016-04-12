@@ -12,6 +12,7 @@
             abird.space.addShape(this.shape);
             this.setBody(this.body);
             this.body.setPos(cc.p(metadata.x,  metadata.y));
+            this.shape.setCollisionType(metadata.collision_type);
             
             return true;
         },
