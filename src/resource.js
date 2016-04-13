@@ -13,7 +13,7 @@ var res = {
     menuBack:"res/menu.png",
     lev1:"res/playButton.png",
     restart: "res/restart.png",
-    lev1:"res/playg.png",
+    lev1:"res/playButton.png",
     restart: "res/restart.png",
     sonidocerdito: "res/sonidocerdo.mp3"
 
