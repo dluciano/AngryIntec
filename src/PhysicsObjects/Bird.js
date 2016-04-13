@@ -33,8 +33,8 @@
                 this.birdWoodCollision.bind(this)
             );
         },
-        birdImpulse: function(){
-            this.body.applyImpulse(cp.v(1000, 800), cp.v(0, 0));
+        birdImpulse: function(x, y){
+            this.body.applyImpulse(cp.v(((1280-x)-1204)*8, 800), cp.v(0, 0));
         },
         birdWoodCollision: function(arbiter, space){
             var self = this;
