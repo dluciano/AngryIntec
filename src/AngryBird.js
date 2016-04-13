@@ -4,6 +4,7 @@ var abird;
         space: null,
         animLayer: null,
         points: 0,
+        currentBird:null,
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
