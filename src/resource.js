@@ -12,7 +12,8 @@ var res = {
     map: "res/halloMap.tmx",
     menuBack:"res/menu.png",
     lev1:"res/playg.png",
-    restart: "res/restart.png"
+    restart: "res/restart.png",
+    sonidocerdito: "res/sonidocerdo.mp3"
 };
 
 var g_resources = [];
