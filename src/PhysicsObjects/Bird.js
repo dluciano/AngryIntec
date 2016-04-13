@@ -43,6 +43,7 @@
                 self.remove();
                 abird.birdExplosion(self.x, self.y);
             });
+            return true;
         },
         birdPigCollision : function (arbiter, space) {
             var shapes = arbiter.getShapes();
