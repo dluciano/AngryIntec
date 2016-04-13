@@ -3,9 +3,11 @@
         ctor: function(metadata){
             this._super(metadata, res.Pigs2_png, cc.rect(732, 800, 58, 58));
             this.animate();
+           
             this.initCollisions();
             return true;
         },
+      
         Btype: "BIRD",
         animate: function(){
 //            var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
@@ -27,14 +29,14 @@
                 PIG,
                 this.birdPigCollision.bind(this)
             );
-            abird.space.addCollisionHandler(
+            /*abird.space.addCollisionHandler(
                 BIRD, 
                 WOOD,
                 this.birdWoodCollision.bind(this)
-            );
+            )*/;
         },
         birdImpulse: function(x, y){
-            this.body.applyImpulse(cp.v(((1280-x)-1204)*20, 800), cp.v(0, 0));
+            this.body.applyImpulse(cp.v(((1280-x)-1204)*20, 500), cp.v(0, 0));
         },
         birdWoodCollision: function(arbiter, space){
             var self = this;
