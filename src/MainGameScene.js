@@ -70,13 +70,23 @@
             var str = "Mouse Up detected, Key: " + event.getButton();
             // do something...
             //Cuando se suelta el mouse se llama la funcion que aplica el impulso
-            cc.log(str);
+            
+                var x = event.getLocationX();
+            var y = event.getLocationY();
+            if(x<19) x = 25;
+            if(x>141) x = 75;
+            if(y<81) y = 150;
+            if(y>385) y = 200;
+            cc.log(x+" "+y);
+             abird.currentBird.birdImpulse(x,y);
         },
         onMouseDown: function(event){
             var str = "Mouse Down detected, Key: " + event.getButton();
             // cuando se presiona el mouse el pajarito se le asigna la posicion del mismo si se encuentra dentro del recuadro de lanzamiento
             // do something...
             cc.log(str);
+           
+            
         }
     },this);
             
