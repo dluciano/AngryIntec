@@ -24,7 +24,7 @@
             }, this); 
             
             var snd = new Audio('res/musicafondo.mp3') 
-            snd.play();
+            //snd.play();
             
             return true;
         },

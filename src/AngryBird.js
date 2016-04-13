@@ -3,6 +3,7 @@ var abird;
     var AngryBirdNamespace = cc.Class.extend({
         space: null,
         animLayer: null,
+        points: 0,
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
@@ -58,6 +59,7 @@ var abird;
         },
         loadAnimation: function(){
             pig1();
+            pointsAnim1000();
         },
         pigExplosion: function(x, y){
             var fire = new cc.ParticleFire();
@@ -68,9 +70,27 @@ var abird;
                 y: y
             });
             this.animLayer.addChild(fire, 10);
+            
+            var a = (new abird.Points({x: x, y: y, anim: "1000points"}));
+            this.animLayer.addChild(a, 11);
+            a.runAnimation();
+            
+            this.points += 1;
         }
     });
     abird = new AngryBirdNamespace();
+    
+    function pointsAnim1000(){
+        var frame1 = new cc.SpriteFrame(res.Scoring_png,  cc.rect(0, 178, 124, 58));
+        var frame2 = new cc.SpriteFrame(res.Scoring_png,  cc.rect(0, 237, 124, 58));
+        var frame3 = new cc.SpriteFrame(res.Scoring_png,  cc.rect(0, 296, 124, 58));
+        var anim1 = new cc.AnimationFrame(frame1, 0.33);
+        var anim2 = new cc.AnimationFrame(frame2, 0.33);
+        var anim3 = new cc.AnimationFrame(frame3, 0.34);
+        var animFrames = [anim1, anim2, anim3];
+        var animation = new cc.Animation(animFrames, 1);
+        cc.animationCache.addAnimation(animation, "1000points");
+    }
     
     function pig1(){
         var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
