@@ -20,8 +20,6 @@
             this.addChild(this.debugNode, 100);
             
             
-       
-            
             
             return true;
         },
