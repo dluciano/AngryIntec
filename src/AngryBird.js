@@ -22,8 +22,7 @@ var abird;
             cc.director.runScene(new abird.MenuGameScene());
         },
         allPigsKilled: function(){
-            if(this.pigs.length === 0)
-                console.log("Won!");
+            
         },
         getTmxObject: function (tmx, key, name){
             var objs = tmx

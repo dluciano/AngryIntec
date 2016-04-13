@@ -6,6 +6,8 @@
             this.initCollisions();
             return true;
         },
+        
+    Btype: "BIRD",
         animate: function(){
 //            var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
 //            var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));
