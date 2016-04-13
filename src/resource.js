@@ -15,7 +15,8 @@ var res = {
     restart: "res/restart.png",
     lev1:"res/playButton.png",
     restart: "res/restart.png",
-    sonidocerdito: "res/sonidocerdo.mp3"
+    sonidocerdito: "res/sonidocerdo.mp3",
+    sonidofondo: "res/musicafondo.mp3"
 
 };
 
