@@ -16,9 +16,6 @@
             restartButton.addClickEventListener(function () {
 
                 abird.reset();
-
-                //abird.AbstractWoodObject.remove();
-
                 var newScene = new abird.MainGameScene();
                 cc.director.runScene(newScene);
             }, this); 

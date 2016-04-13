@@ -22,10 +22,30 @@ var abird;
             cc.director.runScene(new abird.MenuGameScene());
         },
         gameStatus: function(){
-            if(abird.pigs.length === 0)
+            finalBackground: null;
+            finalStat:null;
+            puntuacion:null;
+            finalBackground =new cc.Sprite(res.recty);
+            finalBackground.setPosition(cc.winSize.width / 2,cc.winSize.height /2);
+            
+            if(abird.pigs.length === 0){
                 console.log("Won!");
-            if(abird.pigs.length > 0 && abird.birds.length <= 0)
+                finalStat= new cc.Sprite(res.win);
+                finalStat.setPosition(cc.winSize.width / 2,cc.winSize.height /2);
+                puntuacion = new cc.LabelTTF(this.points,"Arial",24);
+                puntuacion.setPosition(cc.winSize.width / 2,(cc.winSize.height /2)+120);
+                this.addChild(finalBackground,8);
+                this.addChild(finalStat,9);
+                this.addChild(puntuacion,9);
+                
+            }
+            if(abird.pigs.length > 0 && abird.birds.length <= 0){
                 console.log("You loose");
+                finalStat= new cc.Sprite(res.lose);
+                finalStat.setPosition(cc.winSize.width / 2,cc.winSize.height /2);
+                this.addChild(finalBackground,8);
+                this.addChild(finalStat,9);
+            }
         },
         getTmxObject: function (tmx, key, name){
             var objs = tmx
