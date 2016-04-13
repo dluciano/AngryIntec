@@ -15,7 +15,7 @@
                 .getObjects()
                 .forEach(function(obj){
                     var sObj = abird.tmxObjectBuilder(obj);
-                    if(!abird.curentBird ){
+                    if(!abird.currentBird && sObj.Btype === "BIRD"){
                         cc.log("Entro a current");
                         abird.currentBird = sObj;
                     }

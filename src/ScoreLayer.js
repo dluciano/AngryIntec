@@ -14,7 +14,7 @@
             restartButton.y = 600;
             restartButton.addTouchEventListener(this.touchEvent, this);
             restartButton.addClickEventListener(function () {
-                abird.AbstractWoodObject.remove();
+                //abird.AbstractWoodObject.remove();
                 var newScene = new abird.MainGameScene();
                 cc.director.replaceScene(newScene);
             }, this); 
