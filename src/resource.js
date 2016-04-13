@@ -11,14 +11,12 @@ var res = {
     f: "res/buttons.png",
     map: "res/halloMap.tmx",
     menuBack:"res/menu.png",
-<<<<<<< HEAD
     lev1:"res/playButton.png",
-    restart: "res/restart.png"
-=======
+    restart: "res/restart.png",
     lev1:"res/playg.png",
     restart: "res/restart.png",
     sonidocerdito: "res/sonidocerdo.mp3"
->>>>>>> origin/master
+
 };
 
 var g_resources = [];
