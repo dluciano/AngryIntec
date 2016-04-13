@@ -10,7 +10,7 @@
   <object id="3" type="WoodBall" x="546" y="525" width="73.5" height="78.75"/>
   <object id="4" type="WoodSquare" x="798" y="519.75" width="84" height="84"/>
   <object id="5" type="WoodSquare" x="798" y="435.75" width="84" height="84"/>
-  <object id="6" type="WoodRectTriangle" x="798" y="346.5" width="84" height="84"/>
+  <object id="6" type="WoodRectTriangle" x="960.75" y="231" width="84" height="84"/>
   <object id="8" type="PolyWall" x="0" y="0">
    <polyline points="0,0 0,609 1281,609 1281,0 5.25,0"/>
   </object>

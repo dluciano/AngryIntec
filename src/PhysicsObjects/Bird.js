@@ -28,8 +28,8 @@
             );
         },
         birdImpulse: function(){
-        this.body.applyImpulse(cp.v(1000, 800), cp.v(0, 0));
-       } ,
+            this.body.applyImpulse(cp.v(1000, 800), cp.v(0, 0));
+        },
         collisionBegin : function (arbiter, space) {
             var shapes = arbiter.getShapes();
             var bird = null;
@@ -42,7 +42,7 @@
             });
             var birdMass = bird.body.m;
             
-            space.addPostStepCallback(function(){
+            abird.space.addPostStepCallback(function(){
                 pigs.forEach(function(p){
                     if(p.body.m - birdMass <= 0){
                         p.die();
