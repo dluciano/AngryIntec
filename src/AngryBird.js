@@ -8,17 +8,17 @@ var abird;
         pigs: [],
         birds: [],
         reset: function(){
-            this.space= null;
             this.animLayer= null;
             this.points= 0;
             this.currentBird=null;
             this.pigs= [];
             this.birds= [];
-        },
-        run: function(){
-            this.loadAnimation();
             this.space = new cp.Space();
             this.space.gravity = cp.v(0, -100);
+        },
+        run: function(){
+            this.reset();
+            this.loadAnimation();
             cc.director.runScene(new abird.MenuGameScene());
         },
         allPigsKilled: function(){
