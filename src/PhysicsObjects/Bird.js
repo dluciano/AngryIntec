@@ -18,7 +18,7 @@
             this.shape = new cp.BoxShape(this.body, this.width, this.height);
             this.shape.setElasticity(0);
             this.shape.setFriction(0.5);
-            this.body.applyImpulse(cp.v(2000, 800), cp.v(0, 0));
+            this.body.applyImpulse(cp.v(1000, 800), cp.v(0, 0));
         },
         initCollisions: function(){
             abird.space.addCollisionHandler(

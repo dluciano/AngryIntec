@@ -17,10 +17,11 @@
                 p1 = p2;
             }
             var e = (prop && prop.elasticity) ? prop.elasticity : 0;
-            var f = (prop && prop.friction) ? prop.friction : 0;
+            var f = (prop && prop.friction) ? prop.friction : 20;
 
             staticsObjs.forEach(function(obj2){
                 obj2.setElasticity(e);
+                cc.log(f);
                 obj2.setFriction(f);
                 space.addStaticShape(obj2);
             });
