@@ -11,7 +11,7 @@ var res = {
     f: "res/buttons.png",
     map: "res/halloMap.tmx",
     menuBack:"res/menu.png",
-    lev1:"res/playg.png",
+    lev1:"res/playButton.png",
     restart: "res/restart.png"
 };
 
