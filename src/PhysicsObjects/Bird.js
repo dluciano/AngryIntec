@@ -6,8 +6,7 @@
             this.initCollisions();
             return true;
         },
-        
-    Btype: "BIRD",
+        Btype: "BIRD",
         animate: function(){
 //            var frame1 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 641, 98, 98));
 //            var frame2 = new cc.SpriteFrame(res.Pigs_png,  cc.rect(254, 739, 98, 98));
@@ -26,13 +25,26 @@
             abird.space.addCollisionHandler(
                 BIRD, 
                 PIG,
-                this.collisionBegin.bind(this)
+                this.birdPigCollision.bind(this)
+            );
+            abird.space.addCollisionHandler(
+                BIRD, 
+                WOOD,
+                this.birdWoodCollision.bind(this)
             );
         },
         birdImpulse: function(){
             this.body.applyImpulse(cp.v(1000, 800), cp.v(0, 0));
         },
-        collisionBegin : function (arbiter, space) {
+        birdWoodCollision: function(arbiter, space){
+            var self = this;
+            abird.space.addPostStepCallback(function(){
+                self.stopAllActions();
+                self.remove();
+                abird.birdExplosion(self.x, self.y);
+            });
+        },
+        birdPigCollision : function (arbiter, space) {
             var shapes = arbiter.getShapes();
             var bird = null;
             var pigs = [];
@@ -46,6 +58,8 @@
             var self = this;
             abird.space.addPostStepCallback(function(){
                 pigs.forEach(function(p){
+                    self.stopAllActions();
+                    self.remove();
                     abird.birdExplosion(self.x, self.y);
                     if(p.body.m - birdMass <= 0){
                         p.die();

@@ -25,6 +25,7 @@
                 abird.space.removeShape(shapeList[i]);
                 shapeList[i] = null;
             }
+            
             abird.space.removeBody(this.body);
             this.removeFromParent(true);
         }

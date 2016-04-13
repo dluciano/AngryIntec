@@ -24,6 +24,8 @@ var abird;
         gameStatus: function(){
             if(abird.pigs.length === 0)
                 console.log("Won!");
+            if(abird.pigs.length > 0 && abird.birds.length <= 0)
+                console.log("You loose");
         },
         getTmxObject: function (tmx, key, name){
             var objs = tmx
@@ -61,6 +63,7 @@ var abird;
                 case "Bird":
                     obj.collision_type = BIRD;
                     t = new abird.Bird(obj);
+                    this.birds.push(t);
                     break;
                 case "Stick1": //Parte del palito que va de fondo
                     t = new abird.Stick1(obj);

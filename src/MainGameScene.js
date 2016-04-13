@@ -51,34 +51,34 @@
             this.addChild(this.debugNode, 100);
             
             
-        cc.eventManager.addListener({
-        event: cc.EventListener.MOUSE,
-        onMouseMove: function(event){
-            //se asigna al pajarito la posicion del move
-            // do something...
-            var x = event.getLocationX();
-            var y = event.getLocationY();
-            
-            if(x<19) x = 25;
-            if(x>141) x = 75;
-            if(y<81) y = 150;
-            if(y>385) y = 200;
-            abird.currentBird.body.setPos(cc.p(x,  y));
-            
-        },
-        onMouseUp: function(event){
-            var str = "Mouse Up detected, Key: " + event.getButton();
-            // do something...
-            //Cuando se suelta el mouse se llama la funcion que aplica el impulso
-            cc.log(str);
-        },
-        onMouseDown: function(event){
-            var str = "Mouse Down detected, Key: " + event.getButton();
-            // cuando se presiona el mouse el pajarito se le asigna la posicion del mismo si se encuentra dentro del recuadro de lanzamiento
-            // do something...
-            cc.log(str);
-        }
-    },this);
+//        cc.eventManager.addListener({
+//        event: cc.EventListener.MOUSE,
+//        onMouseMove: function(event){
+//            //se asigna al pajarito la posicion del move
+//            // do something...
+//            var x = event.getLocationX();
+//            var y = event.getLocationY();
+//            
+//            if(x<19) x = 25;
+//            if(x>141) x = 75;
+//            if(y<81) y = 150;
+//            if(y>385) y = 200;
+//            abird.currentBird.body.setPos(cc.p(x,  y));
+//            
+//        },
+//        onMouseUp: function(event){
+//            var str = "Mouse Up detected, Key: " + event.getButton();
+//            // do something...
+//            //Cuando se suelta el mouse se llama la funcion que aplica el impulso
+//            cc.log(str);
+//        },
+//        onMouseDown: function(event){
+//            var str = "Mouse Down detected, Key: " + event.getButton();
+//            // cuando se presiona el mouse el pajarito se le asigna la posicion del mismo si se encuentra dentro del recuadro de lanzamiento
+//            // do something...
+//            cc.log(str);
+//        }
+//    },this);
             
             return true;
         },
