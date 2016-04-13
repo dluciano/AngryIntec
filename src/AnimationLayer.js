@@ -15,6 +15,11 @@
                 .getObjects()
                 .forEach(function(obj){
                     var sObj = abird.tmxObjectBuilder(obj);
+                    if(!abird.curentBird ){
+                        cc.log("Entro a current");
+                        abird.currentBird = sObj;
+                    }
+                
                     if(sObj.static) return;
                     self.addChild(sObj, 10);
                 });

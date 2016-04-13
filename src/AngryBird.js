@@ -3,6 +3,7 @@ var abird;
     var AngryBirdNamespace = cc.Class.extend({
         space: null,
         animLayer: null,
+        currentBird:null,
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
