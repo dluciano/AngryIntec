@@ -18,6 +18,11 @@
             this.addChild(this.worldTmx, 4);
             this.debugNode = new cc.PhysicsDebugNode(abird.space);
             this.addChild(this.debugNode, 100);
+            
+            
+       
+            
+            
             return true;
         },
         update: function(dt){

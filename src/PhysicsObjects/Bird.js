@@ -48,6 +48,11 @@
                 });
             });
             return true;
+        },
+         applyImpulse : function (x, y) {
+            this.body.applyimpulse(vect(50,0));
+            console.log("impulso aplicado");
+            return true;
         }
 
     });

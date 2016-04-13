@@ -14,6 +14,15 @@
 //            });
             this.addChild(button);
             
+            
+                 var restartButton = new ccui.Button();
+            restartButton.setTouchEnabled(true);
+            restartButton.loadTextures(res.restart, "", "");
+            restartButton.x = 50;
+            restartButton.y = 650;
+
+            this.addChild(restartButton);
+            
             return true;
         },
         map: null
