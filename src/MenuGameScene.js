@@ -12,10 +12,11 @@
             this.addChild(this.background,0);
             
             
-             this.button.loadTextures(res.lev1,res.lev1);
+            this.button.loadTextures(res.lev1,"","");
             this.button.setAnchorPoint(cc.p(0,0));
             this.button.x=cc.winSize.width/2-155;
             this.button.y=cc.winSize.height/2-250;
+            //this.button.setScale(2.2);
             this.addChild(this.button);
             this.button.addTouchEventListener(this.touchEvent, this);
             this.button.addClickEventListener(function () {
