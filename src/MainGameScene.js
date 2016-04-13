@@ -4,6 +4,28 @@
         animationLayer: null,
         scoreLayer: null,
         worldTmx: null,
+        moveBird: function(){
+         abird.currentBird.birdImpulse();
+        },
+       onTouch: function(location, event){
+          
+        var score;
+        
+   /*     var size = cc.winSize;
+		var  juego = event.getCurrentTarget();
+		var ubicacion = location.getLocation();
+        
+             if(ubicacion.x<275)
+                ubicacion.x = 275;
+        
+             if(ubicacion.x > 675)
+                ubicacion.x = 675;
+        
+		juego.sprConejo.setPosition(ubicacion.x, size.height * 0.15);
+	*/	     
+
+	}
+        ,
         ctor: function(){
             this._super();
             this.scheduleUpdate();
@@ -20,6 +42,12 @@
             this.addChild(this.debugNode, 100);
             
             
+               cc.eventManager.addListener({
+			event: cc.EventListener.TOUCH_ONE_BY_ONE,
+            onTouchBegan: this.onTouch,
+			onTouchMoved: this.moveBird
+			
+		}, this);
             
             return true;
         },
