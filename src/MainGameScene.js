@@ -29,6 +29,7 @@
         ctor: function(){
             this._super();
             this.scheduleUpdate();
+            this.schedule(abird.allPigsKilled, 5);
             this.worldTmx = new cc.TMXTiledMap(res.map);
             this.backgroundLayer = new abird.BackgroundLayer(res.background);
             abird.animLayer = this.animationLayer = new abird.AnimationLayer(this.worldTmx);

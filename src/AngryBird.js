@@ -5,11 +5,25 @@ var abird;
         animLayer: null,
         points: 0,
         currentBird:null,
+        pigs: [],
+        birds: [],
+        reset: function(){
+            this.space= null;
+            this.animLayer= null;
+            this.points= 0;
+            this.currentBird=null;
+            this.pigs= [];
+            this.birds= [];
+        },
         run: function(){
             this.loadAnimation();
             this.space = new cp.Space();
             this.space.gravity = cp.v(0, -100);
             cc.director.runScene(new abird.MenuGameScene());
+        },
+        allPigsKilled: function(){
+            if(this.pigs.length === 0)
+                console.log("Won!");
         },
         getTmxObject: function (tmx, key, name){
             var objs = tmx
@@ -42,6 +56,7 @@ var abird;
                 case "Pig1":
                     obj.collision_type = PIG;
                     t = new abird.Pig1(obj);
+                    this.pigs.push(t);
                     break;
                 case "Bird":
                     obj.collision_type = BIRD;
@@ -75,9 +90,21 @@ var abird;
             var a = (new abird.Points({x: x, y: y, anim: "1000points"}));
             this.animLayer.addChild(a, 11);
             a.runAnimation();
-            
+            this.pigs.pop();
             this.points += 1;
-        }
+        },
+        birdExplosion: function(x, y){
+            var fire = new cc.ParticleFire();
+            fire.setDuration(0.2);
+            fire.setTextureWithRect(cc.textureCache.addImage(res.Pigs2_png), cc.rect(169, 514, 115, 115));
+            fire.attr({
+                x: x, 
+                y: y
+            });
+            this.animLayer.addChild(fire, 10);
+            
+            this.birds.pop();
+        },
     });
     abird = new AngryBirdNamespace();
     

@@ -41,9 +41,10 @@
                     pigs.push(s);
             });
             var birdMass = bird.body.m;
-            
+            var self = this;
             abird.space.addPostStepCallback(function(){
                 pigs.forEach(function(p){
+                    abird.birdExplosion(self.x, self.y);
                     if(p.body.m - birdMass <= 0){
                         p.die();
                         return;
