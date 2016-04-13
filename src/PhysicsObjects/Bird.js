@@ -29,11 +29,11 @@
                 PIG,
                 this.birdPigCollision.bind(this)
             );
-            /*abird.space.addCollisionHandler(
+            abird.space.addCollisionHandler(
                 BIRD, 
                 WOOD,
                 this.birdWoodCollision.bind(this)
-            )*/;
+            );
         },
         birdImpulse: function(x, y){
             this.body.applyImpulse(cp.v(((1280-x)-1204)*20, 500), cp.v(0, 0));
