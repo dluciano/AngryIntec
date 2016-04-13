@@ -3,25 +3,23 @@
         ctor: function(map){
             this._super();
             // Create the button
-            var button = new ccui.Button();
-            button.setTouchEnabled(true);
-            button.loadTextures(res.play, "", "");
-            //button.x = pp.x;
-            //button.y = pp.y;
-            //button.addTouchEventListener(this.touchEvent, this);
-//            button.addClickEventListener(function () {
-//                cc.director.pushScene(new HelloWorldScene());
-//            });
-            this.addChild(button);
             
             
-                 var restartButton = new ccui.Button();
+            
+            var restartButton = new ccui.Button();
             restartButton.setTouchEnabled(true);
             restartButton.loadTextures(res.restart, "", "");
+            restartButton.setScale(0.5);
             restartButton.x = 50;
-            restartButton.y = 650;
+            restartButton.y = 600;
+            restartButton.addTouchEventListener(this.touchEvent, this);
+            restartButton.addClickEventListener(function () {
+                abird.AbstractWoodObject.remove();
+                var newScene = new abird.MainGameScene();
+                cc.director.replaceScene(newScene);
+            }, this); 
 
-            this.addChild(restartButton);
+            this.addChild(restartButton,10);
             
             return true;
         },
