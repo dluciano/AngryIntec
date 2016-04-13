@@ -93,7 +93,7 @@ var abird;
             this.pigs.pop();
             this.points += 1;
             
-            cc.audioEngine.playEffect(res.sonidocerdito, true);
+            cc.audioEngine.playEffect(res.sonidocerdito, false);
         },
         birdExplosion: function(x, y){
             var fire = new cc.ParticleFire();
